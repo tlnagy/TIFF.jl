@@ -7,6 +7,7 @@ end
 using ColorTypes
 using DocStringExtensions
 using FileIO
+using FileWatching
 using FixedPointNumbers
 using IndirectArrays
 using OffsetArrays
@@ -29,6 +30,8 @@ include(joinpath("types", "common.jl"))
 include(joinpath("types", "dense.jl"))
 include(joinpath("types", "mmap.jl"))
 include("load.jl")
+
+export convert!
 
 @deprecate TiffFile(::Type{O}) where O<:Unsigned TiffFile{O}()
 
